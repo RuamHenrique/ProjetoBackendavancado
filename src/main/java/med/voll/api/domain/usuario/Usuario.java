@@ -21,27 +21,21 @@ public class Usuario implements UserDetails{
     private String login;
     private String senha;
 
-
-
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority("ROLE_USER"));
     }
-
 
     public String getPassword() {
         return senha;
     }
 
-
     public String getUsername() {
         return login;
     }
 
-
     public boolean isAccountNonExpired() {
         return true;
     }
-
 
     public boolean isAccountNonLocked() {
         return true;
